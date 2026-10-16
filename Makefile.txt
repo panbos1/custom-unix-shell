@@ -1,0 +1,13 @@
+CC=gcc
+CFLAGS=-Wall
+
+all: hy345sh
+
+hy345sh: shell.o
+	$(CC) $(CFLAGS) -o hy345sh shell.o
+
+shell.o: shell.c
+	$(CC) $(CFLAGS) -c shell.c
+
+clean:
+	rm -f *.o hy345sh
